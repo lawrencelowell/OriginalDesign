@@ -33,11 +33,11 @@ void rollingBall()
 if (x>0&&x<90&&wait == 91)
  x = x + 1;
  if (x>0&&x<15&&wait == 91)
- acc = acc + 0.01;
-  if (x>15&&x<30&&wait == 91)
- acc = acc + 0.0125;
-  if (x>30&&x<90&&wait == 91)
  acc = acc + 0.02;
+  if (x>15&&x<30&&wait == 91)
+ acc = acc + 0.0325;
+  if (x>30&&x<90&&wait == 91)
+ acc = acc + 0.042;
 
 if (x==90 && wait2 < 220){
   wait2 = wait2 + 1;}
