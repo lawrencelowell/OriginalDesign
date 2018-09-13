@@ -1,5 +1,5 @@
 int x = 1;
-int acc = 1;
+float acc = 1;
 int wait = 1;
 int wait2 = 1;
 void setup()
@@ -28,12 +28,17 @@ void rollingBall()
   
   if (x>0&&x<90&& wait == 91) {
   fill(200,20,20);
-  ellipse(710-(52.5*x/30)*0.13*acc,150+(23.8*x/30)*0.13*acc,50,50);
+  ellipse(710-(52.9*x/10)*acc,152+(23.8*x/10)*acc,50,50);
   }
-if (x>0&&x<90&&wait == 91){
+if (x>0&&x<90&&wait == 91)
  x = x + 1;
- acc = acc + 1;
-}
+ if (x>0&&x<15&&wait == 91)
+ acc = acc + 0.01;
+  if (x>15&&x<30&&wait == 91)
+ acc = acc + 0.0125;
+  if (x>30&&x<90&&wait == 91)
+ acc = acc + 0.02;
+
 if (x==90 && wait2 < 220){
   wait2 = wait2 + 1;}
 
